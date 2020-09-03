@@ -4,6 +4,7 @@
 ```hcl-terraform
 module "my-awesome-app-on-fargate" {
   source = "git::ssh://git@github.com/kelseymok/terraform-modules.git//fargate"
+//  source = "git::https://github.com/kelseymok/terraform-modules.git//fargate"
 
   module-name = "my-awesome-app"
   vpc-id = "some-vpc-id"
