@@ -1,7 +1,7 @@
 resource "aws_iam_role" "ecs" {
   name = "${var.module-name}-ecs-execution"
-  assume_role_policy = data.aws_iam_policy_document.ecs-assume-role
-  permissions_boundary = var.permissions-boundary-arn ? var.permissions-boundary-arn : ""
+  assume_role_policy = data.aws_iam_policy_document.ecs-assume-role.json
+  permissions_boundary = var.permissions-boundary-arn == "" ? "" : var.permissions-boundary-arn
 }
 
 data "aws_iam_policy_document" "ecs-assume-role" {

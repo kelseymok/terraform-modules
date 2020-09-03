@@ -36,6 +36,6 @@ resource "aws_ecs_service" "app" {
   }
 
   depends_on = [
-    "aws_alb_listener.front_end",
+    aws_alb_listener.front-end
   ]
 }
