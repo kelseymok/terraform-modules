@@ -20,4 +20,5 @@ variable "module-name" {
 
 variable "permissions-boundary-arn" {
   type = string
+  default = ""
 }
