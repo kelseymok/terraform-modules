@@ -25,7 +25,7 @@ variable "permissions-boundary-arn" {
 
 variable "container-port" {
   type = number
-  descript = "The port exposed from your container"
+  description = "The port exposed from your container"
   default = 8080
 }
 
