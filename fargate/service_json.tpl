@@ -7,8 +7,8 @@
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 8080,
-          "hostPort": 8080
+          "containerPort": ${container_port},
+          "hostPort": ${host_port}
         }
       ],
       "logConfiguration": {

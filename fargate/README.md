@@ -23,6 +23,8 @@ module "my-awesome-app-on-fargate" {
 | private-subnet-ids | List of private subnet IDs associated the VPC | list(string) | yes | |
 | public-subnet-ids | List of private subnet IDs associated the VPC | string | yes | |
 | permissions-boundary-arn | A permissions boundary arn for service/instance roles | string | no | "" |
+| container-port | Port exposed from the container | number | yes | 8080 |
+| host-port | Port exposed on the host from the container | number | no | 8080 |
 
 
 ## Outputs

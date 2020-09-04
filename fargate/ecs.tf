@@ -3,6 +3,8 @@ data "template_file" "ecs-service-json" {
   vars = {
     image = var.image-url
     module_name = var.module-name
+    container_port = var.container-port
+    host_port = var.host-port
   }
 }
 
@@ -32,7 +34,7 @@ resource "aws_ecs_service" "app" {
   load_balancer {
     target_group_arn = aws_alb_target_group.app.id
     container_name   = var.module-name
-    container_port   = "8080"
+    container_port   = var.container-port
   }
 
   depends_on = [

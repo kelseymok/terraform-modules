@@ -60,8 +60,8 @@ resource "aws_security_group" "ecs-tasks" {
 
   ingress {
     protocol        = "tcp"
-    from_port       = "8080"
-    to_port         = "8080"
+    from_port       = var.host-port
+    to_port         = var.host-port
     security_groups = [aws_security_group.lb.id]
   }
 
